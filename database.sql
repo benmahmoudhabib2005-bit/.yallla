@@ -1,18 +1,7 @@
--- ============================================================
--- YallaWork Database — Enhanced Schema with Account Management
--- ============================================================
-
 CREATE DATABASE IF NOT EXISTS yallawork
   CHARACTER SET utf8mb4
   COLLATE utf8mb4_unicode_ci;
-
 USE yallawork;
-
--- ------------------------------------------------------------
--- 1. users / accounts
--- Stores login accounts securely.
--- IMPORTANT: never store plain passwords; store PHP password_hash().
--- ------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS users (
   id               INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   prenom           VARCHAR(100) NOT NULL,
